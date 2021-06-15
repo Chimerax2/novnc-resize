@@ -12,7 +12,8 @@ For the project you need only docker installed.
 
 In the root directory run:
 
-`git submodule udpate --recursive --remote`
+`git submodule init`
+`git submodule update --recursive --remote`
 
 `sudo docker build --rm -t novnc:resize .` - Build the docker image
 
