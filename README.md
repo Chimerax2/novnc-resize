@@ -12,6 +12,8 @@ For the project you need only docker installed.
 
 In the root directory run:
 
+`git submodule udpate --recursive --remote`
+
 `sudo docker build --rm -t novnc:resize .` - Build the docker image
 
 Then you need to run it:
@@ -29,7 +31,7 @@ Port    Process
 
 ### Running and testing
 
-After you run the docker container you can access the application on the following link: [http://localhost:6080/vnc.html]
+After you run the docker container you can access the application on the following link: [http://localhost:6080/vnc.html](http://localhost:6080/vnc.html)
 Press the connect button and you should see the internal screen. When you resize your browser you'll see that the internal virtual display resizes too.
 
 As proof you can get inside the container and check this:
