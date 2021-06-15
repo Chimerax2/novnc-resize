@@ -12,7 +12,9 @@ For the project you need only docker installed.
 
 In the root directory run:
 
-`git submodule udpate --recursive --remote`
+`git submodule init`
+
+`git submodule update --recursive --remote`
 
 `sudo docker build --rm -t novnc:resize .` - Build the docker image
 
@@ -24,6 +26,7 @@ You need ports `5900, 6080, 6081` free for the following processes:
 
 ```
 Port    Process
+
 5900    x11vnc
 6080    novnc and websockify
 6081    api to receive resize
@@ -38,5 +41,5 @@ As proof you can get inside the container and check this:
 
 1. `sudo docker ps`
 2. Copy the container ID and run `sudo docker exec -it ${dockerID} /bin/bash`
-3. Once you are inside run `DISPLAY=:0` and `xrandr`
+3. Once you are inside run `export DISPLAY=:0` and `xrandr`
 4. You will see list with resolutions and * next to the one selected
