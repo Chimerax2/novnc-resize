@@ -6,7 +6,7 @@ RUN apt-get update && \
     apt-get -y install gnupg curl && \
     curl -sL https://deb.nodesource.com/setup_12.x  | bash - && \
     apt-get install -y nodejs xvfb dbus-x11 firefox libxtst-dev \
-    x11-apps xserver-xorg-core x11-xserver-utils wget x11vnc jwm
+    x11-apps xserver-xorg-core x11-xserver-utils wget x11vnc jwm git
 
 RUN mkdir -p /var/lib/dbus &&\
     mkdir /var/run/dbus && \
